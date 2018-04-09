@@ -45,7 +45,7 @@ const store = (function() {
     },
     setSearchTerm: function(searchTerm) {
       this.searchTerm = searchTerm;
-    }
+    },
   };
     
   const localSearchTerm = store.searchTerm;
