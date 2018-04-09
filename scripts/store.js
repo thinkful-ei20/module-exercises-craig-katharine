@@ -1,7 +1,9 @@
 'use strict';
 
 const store = (function() {
+  const foo = 'bar!';
   let bigObject = {
+    secretStuff: 'no one should see this',
     items: [
       { id: cuid(), name: 'apples', checked: false },
       { id: cuid(), name: 'oranges', checked: false },
@@ -11,5 +13,15 @@ const store = (function() {
     hideCheckedItems: false,
     searchTerm: '',
   };
-  return 
+  
+  const localSearchTerm = bigObject.searchTerm;
+  const localHideCheckedItems = bigObject.hideCheckedItems;
+  const localItems = bigObject.items;
+
+  return {
+    localSearchTerm,
+    localHideCheckedItems,
+    localItems,
+  };
+
 }());
