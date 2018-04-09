@@ -142,9 +142,10 @@ const shoppingList = (function(){
   }
   
   function handleToggleFilterClick() {
-    $('.js-filter-checked').click(() => {
-      store.toggleCheckedFilter;
-      console.log(123);
+    $('.js-filter-checked').click(() => {      
+      store.toggleCheckedFilter();      
+      render();
+      //console.log('handleToggleFilterClick');
     });
   }
   

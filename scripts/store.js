@@ -43,9 +43,8 @@ const store = (function() {
       items.splice(index, 1);
     },
     toggleCheckedFilter: function() {
-      console.log(this.hideCheckedItems);
+      console.log('toggleCheckedFilter');
       this.hideCheckedItems = !this.hideCheckedItems;
-      console.log(this.hideCheckedItems);
     },
     setSearchTerm: function(searchTerm) {
       this.searchTerm = searchTerm;
