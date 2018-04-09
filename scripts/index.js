@@ -3,6 +3,7 @@
 /* global shoppingList, cuid */
 
 // eslint-disable-next-line no-unused-vars
+
 // const store = {
 //   items: [
 //     { id: cuid(), name: 'apples', checked: false },
@@ -19,5 +20,3 @@ $(document).ready(function() {
   shoppingList.render();
 });
 
-console.log(store);
-console.log(foo);
