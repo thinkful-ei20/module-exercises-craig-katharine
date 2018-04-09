@@ -110,13 +110,6 @@ const shoppingList = (function(){
     item.name = itemName;
   }
   
-  function toggleCheckedItemsFilter() {
-    store.hideCheckedItems = !store.hideCheckedItems;
-  }
-  
-  function setSearchTerm(val) {
-    store.searchTerm = val;
-  }
   
   
   function handleDeleteItemClicked() {
@@ -143,7 +136,9 @@ const shoppingList = (function(){
   
   function handleToggleFilterClick() {
     $('.js-filter-checked').click(() => {
-      store.toggleCheckedFilter;
+      console.log('foobar!');
+      store.toggleCheckedFilter();
+      render();
     });
   }
   

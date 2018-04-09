@@ -41,7 +41,9 @@ const store = (function() {
       items.splice(index, 1);
     },
     toggleCheckedFilter: function() {
-      this.hideCheckedItems = !this.hideCheckedItems;
+      console.log('barfoo!', store.hideCheckedItems); 
+      store.hideCheckedItems = !store.hideCheckedItems;
+      console.log('marbles', store.hideCheckedItems);
     },
     setSearchTerm: function(searchTerm) {
       this.searchTerm = searchTerm;
