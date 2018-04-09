@@ -13,7 +13,9 @@ const store = (function() {
     hideCheckedItems: false,
     searchTerm: '',
     findById: function(id) {
-      return items.find(e => e === id);
+      let objectOfId = items.find(e => e['id'] === id);
+      // console.log(objectOfId);
+      return objectOfId;
     },
     addItem: function(name) {
       try {
@@ -24,12 +26,12 @@ const store = (function() {
       }      
     },
     findAndToggleChecked: function(id) {
-      this.findById(id).checked = this.findById(id).checked === true ? this.findById(id).checked = false : this.findById(id).checked = true;
+      findById(id).checked = !findById(id).checked;
     },
     findAndUpdateName: function(id, newName) {
       try {
-        Item.validateName(name);
-        Item.findById(id).name = newName;
+        Item.validateName(newName);
+        findById(id).name = newName;
       } catch (e) {
         console.log('Cannot update name:', e);
       }
