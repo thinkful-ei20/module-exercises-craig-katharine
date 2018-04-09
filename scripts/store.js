@@ -1,3 +1,5 @@
+/* global cuid */
+
 'use strict';
 
 const store = (function() {
@@ -5,10 +7,10 @@ const store = (function() {
   let store = {
     secretStuff: 'no one should see this',
     items: [
-      // { id: cuid(), name: 'apples', checked: false },
-      // { id: cuid(), name: 'oranges', checked: false },
-      // { id: cuid(), name: 'milk', checked: true },
-      // { id: cuid(), name: 'bread', checked: false },
+      { id: cuid(), name: 'apples', checked: false },
+      { id: cuid(), name: 'oranges', checked: false },
+      { id: cuid(), name: 'milk', checked: true },
+      { id: cuid(), name: 'bread', checked: false },
     ],
     hideCheckedItems: false,
     searchTerm: '',
@@ -41,7 +43,9 @@ const store = (function() {
       items.splice(index, 1);
     },
     toggleCheckedFilter: function() {
+      console.log(this.hideCheckedItems);
       this.hideCheckedItems = !this.hideCheckedItems;
+      console.log(this.hideCheckedItems);
     },
     setSearchTerm: function(searchTerm) {
       this.searchTerm = searchTerm;
