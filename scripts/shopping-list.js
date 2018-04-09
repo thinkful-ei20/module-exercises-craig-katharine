@@ -116,8 +116,7 @@ const shoppingList = (function(){
   
   // function setSearchTerm(val) {
   //   store.searchTerm = val;
-  // }
-  
+  // }  
   
   function handleDeleteItemClicked() {
     // like in `handleItemCheckClicked`, we use event delegation
